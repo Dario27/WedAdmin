@@ -1,0 +1,52 @@
+/* Dropdowns */
+
+.dropdown {
+  .dropdown-toggle {
+    &:after {
+      border-top: 0;
+      border-right: 0;
+      border-left: 0;
+      border-bottom: 0;
+      font: normal normal normal 24px/1 "Material Design Icons";
+      content: "\f0140";
+      width: auto;
+      height: auto;
+      vertical-align: baseline;
+      line-height: .625rem;
+      font-size: 1rem;
+      margin-left: .3rem;
+
+      .rtl & {
+        margin-left: 0;
+        margin-right: 0.255em;
+      }
+    }
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    margin-top: .75rem;
+    font-size: $default-font-size;
+    background-color: $dropdown-bg;
+    color: $dropdown-color;
+
+    .rtl & {
+      text-align: right;
+    }
+
+    .dropdown-item {
+      font-size: 0.875rem;
+      padding: .25rem 1.5rem;
+      cursor: pointer;
+
+      &:active {
+        background: initial;
+      }
+
+      &:hover {
+        background-color: $dropdown-hover-bg;
+        color: inherit;
+      }
+    }
+  }
+}

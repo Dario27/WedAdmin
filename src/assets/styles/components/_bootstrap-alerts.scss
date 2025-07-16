@@ -1,0 +1,26 @@
+/* Bootstrap Alerts */
+
+.alert {
+  font-size: $default-font-size;
+  padding: 0.4rem 1rem;
+
+  i {
+    font-size: 1.25rem;
+    margin-right: 1.25rem;
+    vertical-align: middle;
+    line-height: .5;
+  }
+}
+
+
+.custom-alert-secondary {
+  border: 3px solid $secondary;
+  background: transparent;
+  color: $white;
+}
+
+.custom-alert-info {
+  border: 3px solid $info;
+  background: transparent;
+  color: $success;
+}
