@@ -271,12 +271,8 @@ function Landingpage() {
         <div className="container">
           <div className="row">
             <div className="col-sm-8">
-              <h4 className="mt-3">Copyright © 2024 <a href="!#" onClick={event => event.preventDefault()}>bootstrapdash</a>. All rights reserved.</h4>
-            </div>
-            <div className="col-sm-4">
-              <h4>Hand-crafted &amp; made with <i className="mdi mdi-heart text-danger d-inline-block"></i>
-              </h4>
-            </div>
+              <h4 className="mt-3">Copyright © 2024 <a href="!#" onClick={event => event.preventDefault()}></a>. All rights reserved.</h4>
+            </div>            
           </div>
         </div>
       </footer>

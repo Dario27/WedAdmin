@@ -17,17 +17,6 @@ function Navbar() {
         document.querySelector('.right-sidebar').classList.toggle('open')
     }
 
-    // const handleToggle = () => {
-    //     const body = document.body;
-        
-    //     if (body.classList.contains('sidebar-icon-only')) {
-    //       body.classList.remove('sidebar-icon-only');
-    //       body.classList.add('sidebar-fixed');
-    //     } else {
-    //       body.classList.add('sidebar-icon-only');
-    //     }
-    // };
-
   return (
     <>
     <nav className="navbar col-lg-12 col-12 p-lg-0 fixed-top d-flex flex-row">
@@ -57,19 +46,16 @@ function Navbar() {
                     </div>
                   </Dropdown.Item>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center border-0 mt-2" onClick={evt =>evt.preventDefault()}>
-                    Manage Accounts
+                    Administrar Cuenta
                   </Dropdown.Item>
                   <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center border-0" onClick={evt =>evt.preventDefault()}>
-                    Change Password
-                  </Dropdown.Item>
-                  <Dropdown.Item className="dropdown-item preview-item d-flex align-items-center border-0" onClick={evt =>evt.preventDefault()}>
-                    Check Inbox
+                    Cambiar Contraseña
                   </Dropdown.Item>
                   <Dropdown.Item
                     className="dropdown-item preview-item d-flex align-items-center border-0"
                     onClick={handleLogout}
                   >
-                    Sign Out
+                    Cerrar Sesion
                   </Dropdown.Item>
                 </Dropdown.Menu>
               </Dropdown>

@@ -4,8 +4,8 @@ import { useState } from 'react'
 import Swal from 'sweetalert2'
 
 function Login() {
-  const [username, setUsername] = useState('');
-  const [password, setPassword] = useState('');
+  const [username, setUsername] = useState('jmartillo');
+  const [password, setPassword] = useState('Abc_123');
   const navigate = useNavigate();
 
   const handleLogin = (e) => {

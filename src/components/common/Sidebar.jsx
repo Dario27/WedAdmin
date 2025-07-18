@@ -5,16 +5,6 @@ import { Link } from "react-router-dom";
 const initialState = {
   drop1: false,
   drop2: false,
-  drop3: false,
-  drop4: false,
-  drop5: false,
-  drop6: false,
-  drop7: false,
-  drop8: false,
-  drop9: false,
-  drop10: false,
-  drop11: false,
-  drop12: false,
   common: false,
 };
 
@@ -99,38 +89,34 @@ function Sidebar() {
           </li>           
          
           <li className={ isPathActive('/notification') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/notification" onClick={() => dispatch({ type: "toggle", menu: "common" })}>
-              <i className="mdi mdi-bell-outline menu-icon"></i> 
-              <span className="menu-title">Notifications</span>
-            </Link>
-          </li>   
-
-          <li className={ isPathActive('/text-editor') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/text-editor" onClick={() => dispatch({ type: "toggle", menu: "common" })}>
-              <i className="mdi mdi-comment-text-outline menu-icon"></i>
-              <span className="menu-title">Text Editor</span>
-            </Link>
-          </li>
-
-          <li className={ isPathActive('/code-editor') ? 'nav-item active' : 'nav-item' }>
-            <Link className="nav-link" to="/code-editor" onClick={() => dispatch({ type: "toggle", menu: "common" })}>
-              <i className="mdi mdi-code-tags menu-icon"></i>
-              <span className="menu-title">Code Editor</span>
-            </Link>
-          </li>          
+             <div  className={`nav-link  ${  state.menuExpand === "drop1" ? "menu-expanded" : ""  }`}  onClick={() => dispatch({ type: "toggle", menu: "drop1" })}  aria-expanded={state.drop1}>
+              <i className="mdi mdi-lock-outline menu-icon"></i>
+              <span className="menu-title"> TRANSACCIONES</span>
+              <i className="menu-arrow"></i>
+            </div>
+             <Collapse in={ state.drop1 }>
+             <ul className="nav flex-column sub-menu">
+              <li className="nav-item"> <Link className={ isPathActive('/user/login') ? 'nav-link active' : 'nav-link' } to="/user/login">Pagos</Link></li>
+              <li className="nav-item"> <Link className={ isPathActive('/user/login') ? 'nav-link active' : 'nav-link' } to="/user/login">Reistro Familiar</Link></li>
+             </ul>
+             </Collapse>
+          </li>        
           
           <li className={ isPathActive('/user') ? 'nav-item active' : 'nav-item' }>
             {/* <div className={ this.state.userPagesMenuOpen ? 'nav-link menu-expanded' : 'nav-link' } onClick={ () => this.toggleMenuState('userPagesMenuOpen') } data-toggle="collapse"> */}
-            <div  className={`nav-link  ${  state.menuExpand === "drop9" ? "menu-expanded" : ""  }`}  onClick={() => dispatch({ type: "toggle", menu: "drop9" })}  aria-expanded={state.drop9}>
+            <div  className={`nav-link  ${  state.menuExpand === "drop2" ? "menu-expanded" : ""  }`}  onClick={() => dispatch({ type: "toggle", menu: "drop2" })}  aria-expanded={state.drop2}>
               <i className="mdi mdi-lock-outline menu-icon"></i>
-              <span className="menu-title">User Pages</span>
+              <span className="menu-title"> CONSULTAS</span>
               <i className="menu-arrow"></i>
             </div>
-            <Collapse in={ state.drop9 }>
+            <Collapse in={ state.drop2 }>
               <ul className="nav flex-column sub-menu">
-                <li className="nav-item"> <Link className={ isPathActive('/user/login') ? 'nav-link active' : 'nav-link' } to="/user/login">Login</Link></li>                
-                <li className="nav-item"> <Link className={ isPathActive('/user/register') ? 'nav-link active' : 'nav-link' } to="/user/register">Register</Link></li>                
-                <li className="nav-item"> <Link className={ isPathActive('/user/lock-screen') ? 'nav-link active' : 'nav-link' } to="/user/lock-screen">Lockscreen</Link></li>
+                <li className="nav-item"> <Link className={ isPathActive('/user/login') ? 'nav-link active' : 'nav-link' } to="/user/login">Historico</Link></li>                
+                <li className="nav-item"> <Link className={ isPathActive('/user/register') ? 'nav-link active' : 'nav-link' } to="/user/register">Estado de los Pedidos</Link></li>                
+                <li className="nav-item"> <Link className={ isPathActive('/user/lock-screen') ? 'nav-link active' : 'nav-link' } to="/user/lock-screen">Stock Bodega</Link></li>
+                <li className="nav-item"> <Link className={ isPathActive('/user/lock-screen') ? 'nav-link active' : 'nav-link' } to="/user/lock-screen">Estado de Cuenta</Link></li>
+                <li className="nav-item"> <Link className={ isPathActive('/user/lock-screen') ? 'nav-link active' : 'nav-link' } to="/user/lock-screen">Pedidos</Link></li>
+                <li className="nav-item"> <Link className={ isPathActive('/user/lock-screen') ? 'nav-link active' : 'nav-link' } to="/user/lock-screen">Cash  Management</Link></li>
               </ul>
             </Collapse>
           </li> 
