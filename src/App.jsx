@@ -20,11 +20,12 @@ function App() {
 
   useEffect(() => {
     const fullPageLayoutRoutes = [
-      "/user-pages/login",
-      "/user-pages/login-2",
-      "/user-pages/register",
-      "/user-pages/register-2",
-      "/user-pages/lock-screen",
+      "/user/login", // <-- agrega esta línea
+      "/user/login",
+      "/user/login-2",
+      "/user/register",
+      "/user/register-2",
+      "/user/lock-screen",
       "/error-pages/404",
       "/error-pages/500",
       "/general-pages/landing",
